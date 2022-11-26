@@ -1,12 +1,27 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .container {
-  // border: 1px solid #f00;
-
   width: 100%;
   max-width: 1200px;
-  padding-left: $gutter;
-  padding-right: $gutter;
   margin-left: auto;
   margin-right: auto;
+  background: $color-light;
+
+  // border: 3px solid #00f;
+
+  @include xl-2 {
+    border-radius: 7px;
+    box-shadow: $box-shadow;
+    margin-top: $gutter * 5;
+    margin-bottom: $gutter * 5;
+  }
+}
+
+.padding-x {
+  width: 100%;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  // border: 1px solid #0f0;
 }
