@@ -1,1 +1,8 @@
 @use "base/reset";
+@use "base/utilities";
+
+@use "components/icon";
+@use "components/search";
+@use "components/notification";
+
+@use "layout/header";

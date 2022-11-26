@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.notification {
+  position: relative;
+
+  &__icon {
+    width: 45px;
+    height: 25px;
+    fill: $color-grey;
+  }
+
+  &__number {
+    display: inline-block;
+    line-height: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    font-size: 12px;
+    background: $color-primary;
+    color: $color-light;
+    @include flexCenter;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  @include sm {
+    &__number {
+      top: 0;
+      transform: translate(-50%, 0);
+    }
+  }
+}

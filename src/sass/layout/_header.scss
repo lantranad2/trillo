@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.header {
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: $gutter;
+    padding-bottom: $gutter;
+  }
+
+  &__logo {
+    max-width: 60px;
+  }
+
+  &__search {
+    order: 1;
+    flex-basis: 100%;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &__bookmark,
+  &__message,
+  &__user {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.15s;
+    align-self: stretch;
+    @include flexCenter;
+  }
+
+  &__bookmark {
+    padding-left: 0;
+  }
+
+  &__user {
+    padding-right: 0;
+  }
+
+  &__bookmark:hover,
+  &__message:hover,
+  &__user:hover {
+    background: $color-grey-light;
+  }
+
+  &__bookmark {
+    margin-left: auto;
+  }
+
+  &__user {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__user-image {
+    width: 40px;
+    border-radius: 100%;
+  }
+
+  @include xs-3 {
+    &__nav {
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+
+    &__bookmark {
+      margin-left: 0;
+    }
+  }
+
+  @include sm {
+    &__content {
+      flex-wrap: nowrap;
+    }
+
+    &__search {
+      order: 0;
+      max-width: 340px;
+    }
+  }
+}

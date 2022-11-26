@@ -1,6 +1,8 @@
 @use "../abstracts/variables" as *;
 
 .container {
+  // border: 1px solid #f00;
+
   width: 100%;
   max-width: 1200px;
   padding-left: $gutter;

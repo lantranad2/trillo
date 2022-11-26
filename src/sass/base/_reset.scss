@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 *,
 *::before,
 *::after {
@@ -14,6 +16,8 @@ body {
   font-family: "Open Sans", sans-serif;
   font-size: 1.8rem;
   line-height: 1.5rem;
+  color: $color-grey;
+  box-sizing: border-box;
 }
 
 ul {
@@ -21,10 +25,15 @@ ul {
 }
 
 img {
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 a {
   text-decoration: none;
+}
+
+input {
+  font-family: inherit;
+  color: inherit;
 }
