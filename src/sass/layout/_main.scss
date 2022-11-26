@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  &__detail {
+    background: $color-grey-light;
+    padding: $gutter;
+  }
+
+  &__description {
+    background: $color-light;
+    padding: $gutter;
+    border-radius: 7px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.6rem;
+  }
+
+  &__introduction {
+  }
+
+  &__description-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    border-top: 1px solid $color-grey-light;
+    border-bottom: 1px solid $color-grey-light;
+  }
+
+  &__description-item {
+    flex: 50%;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  &__item-icon {
+    fill: $color-primary;
+    width: 14px;
+    height: 14px;
+  }
+
+  &__item-text {
+    font-size: 1.4rem;
+  }
+
+  &__recommend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__recommend-people {
+    display: flex;
+  }
+
+  &__recommend-text {
+    text-align: center;
+  }
+
+  &__recommend-person {
+    width: 45px;
+    height: 45px;
+    border: 3px solid $color-grey-light;
+    border-radius: 100%;
+    overflow: hidden;
+
+    &:not(:first-child) {
+      margin-left: -1rem;
+    }
+  }
+
+  @include xs-2 {
+    &__description-item {
+      flex: 100%;
+    }
+
+    &__item-text {
+      font-size: 1.6rem;
+    }
+  }
+
+  @include xs-4 {
+    &__item-text {
+      font-size: 1.4rem;
+    }
+  }
+
+  @include sm {
+    &__description {
+      font-size: 1.8rem;
+    }
+
+    &__item-text {
+      font-size: inherit;
+    }
+
+    &__recommend {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+}
