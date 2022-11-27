@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/animation" as *;
+
+.link {
+  font-size: 1.4rem;
+  padding-bottom: 3px;
+  color: $color-primary;
+  border-bottom: 1px solid currentColor;
+  transition: all 0.15s;
+  padding: 2px;
+
+  &:hover {
+    color: $color-grey;
+    animation: heart-beat 1s infinite;
+  }
+
+  &__arrow {
+    transition: all 0.2s;
+  }
+
+  &:hover &__arrow {
+    margin-left: 5px;
+  }
+}

@@ -1,22 +1,20 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
-@use "../base/animation" as *;
 
 .overview {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: 1rem;
 
   & > * {
-    // border: 2px solid #00f;
-
     display: flex;
     gap: 0.5rem;
   }
 
   &__heading {
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     line-height: 1;
   }
@@ -29,8 +27,6 @@
   &__location {
     display: flex;
     align-items: center;
-    // margin-left: auto;
-    // border: none;
   }
 
   &__icon {
@@ -39,27 +35,13 @@
     height: 14px;
   }
 
-  &__location-name {
-    font-size: 1.4rem;
-    padding-bottom: 3px;
-    color: $color-primary;
-    border-bottom: 1px solid currentColor;
-    transition: all 0.15s;
-    padding: 2px;
-
-    &:hover {
-      color: $color-grey;
-      animation: heart-beat 1s infinite;
-    }
-  }
-
   &__vote {
     background: $color-primary;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 5px;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
   }
 
   &__vote-mark {
@@ -88,10 +70,6 @@
     &__icon {
       width: 20px;
       height: 20px;
-    }
-
-    &__location-name {
-      font-size: 1.8rem;
     }
 
     &__vote-mark {
@@ -140,7 +118,7 @@
     }
 
     &__location-name {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
 
     &__vote-mark {

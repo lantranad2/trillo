@@ -7,8 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   background: $color-light;
-
-  // border: 3px solid #00f;
+  overflow: hidden;
 
   @include xl-2 {
     border-radius: 7px;
@@ -22,6 +21,4 @@
   width: 100%;
   padding-left: $gutter;
   padding-right: $gutter;
-
-  // border: 1px solid #0f0;
 }

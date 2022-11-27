@@ -1,9 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .content {
-  & > * {
-    border: 3px solid #0f0;
-  }
 }
 
 @include lg {
@@ -12,7 +9,7 @@
   }
 
   .sidebar {
-    flex: 0 0 200px;
+    flex: 0 0 160px;
     flex-direction: column;
   }
 

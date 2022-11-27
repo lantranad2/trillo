@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      padding: 10rem;
+    }
+
+    .btn {
+      text-transform: uppercase;
+      cursor: pointer;
+      color: #fff;
+      background-image: linear-gradient(to right, #f36, #ba265d);
+      border: none;
+      border-radius: 100px;
+      outline: none;
+      position: relative;
+    }
+
+    .btn:hover {
+      background-image: linear-gradient(to right, #ba265d, #f36);
+    }
+
+    .btn:hover .btn__text-1 {
+      transform: translateY(50%);
+    }
+
+    .btn:hover .btn__text-2 {
+      transform: translate(-50%, -50%);
+    }
+
+    .btn__text {
+      border: 1px solid #00f;
+      font-size: 1.6rem;
+      line-height: 1;
+      transition: all 0.5s;
+      display: block;
+    }
+
+    .btn__text-1 {
+      padding: 1.6rem 5.5rem;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .btn__text-2 {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -150%);
+    }
+  </style>
+  <body>
+    <button class="btn main__footer-btn">
+      <span class="btn__text btn__text-1">Book now</span>
+      <span class="btn__text btn__text-2">Only 4 rooms left</span>
+    </button>
+  </body>
+</html>

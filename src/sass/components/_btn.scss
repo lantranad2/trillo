@@ -1,0 +1,57 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+  border: none;
+  outline: none;
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  border-radius: 100px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: $color-light;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    background-image: linear-gradient(
+      to right,
+      $color-primary-dark,
+      $color-primary-light
+    );
+  }
+
+  &:hover &__text-1 {
+    transform: translateY(100%);
+  }
+
+  &:hover &__text-2 {
+    transform: translate(-50%, -50%);
+  }
+
+  &__text {
+    display: block;
+    line-height: 1;
+    transition: all 0.5s;
+    font-size: 1.6rem;
+    transition: all 0.3s;
+  }
+
+  &__text-1 {
+    padding: 1.6rem 5.5rem;
+    position: relative;
+  }
+
+  &__text-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -150%);
+    @include flexCenter;
+  }
+}

@@ -47,23 +47,14 @@
 
   &__icon {
     fill: $color-light;
+    width: 18px;
+    height: 18px;
   }
 
   &__text {
     color: $color-light;
     text-transform: uppercase;
-    font-size: 1.6rem;
-  }
-
-  @include xs-2 {
-    &__icon {
-      width: 18px;
-      height: 18px;
-    }
-
-    &__text {
-      font-size: 1.4rem;
-    }
+    font-size: 1.4rem;
   }
 
   @include xs-3 {
@@ -89,7 +80,7 @@
     }
 
     &__text {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -104,7 +95,7 @@
       flex-direction: row;
       align-items: center;
       justify-content: flex-start;
-      padding-left: $gutter;
+      padding-left: 0.8rem;
     }
   }
 }

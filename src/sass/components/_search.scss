@@ -14,8 +14,6 @@
     flex: 1;
     margin-left: 1rem;
     transition: all 0.3s;
-
-    // border: 1px solid #f00;
   }
 
   &__input:focus {
@@ -34,13 +32,9 @@
     margin-right: 1rem;
     transition: all 0.3s;
     cursor: pointer;
-
-    // border: 1px solid #f00;
   }
 
   &__icon {
     fill: $color-grey;
-
-    // border: 1px solid #00f;
   }
 }
